@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{6ba6bde6-95b3-4a77-bd3d-030294fe08f4}</ProjectGuid>
+    <RootNamespace>opencvtest</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;OPEN_ICON_JUDGE;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)include;$(SolutionDir)VideoCapture;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>avcodec.lib;avdevice.lib;avformat.lib;avutil.lib;postproc.lib;swresample.lib;swscale.lib;avfilter.lib;winmm.lib;d3d9.lib;opencv_aruco480d.lib;opencv_bgsegm480d.lib;opencv_bioinspired480d.lib;opencv_calib3d480d.lib;opencv_ccalib480d.lib;opencv_core480d.lib;opencv_cvv480d.lib;opencv_datasets480d.lib;opencv_dnn480d.lib;opencv_dnn_objdetect480d.lib;opencv_dnn_superres480d.lib;opencv_dpm480d.lib;opencv_face480d.lib;opencv_features2d480d.lib;opencv_flann480d.lib;opencv_fuzzy480d.lib;opencv_gapi480d.lib;opencv_hfs480d.lib;opencv_highgui480d.lib;opencv_imgcodecs480d.lib;opencv_imgproc480d.lib;opencv_img_hash480d.lib;opencv_intensity_transform480d.lib;opencv_line_descriptor480d.lib;opencv_mcc480d.lib;opencv_ml480d.lib;opencv_objdetect480d.lib;opencv_optflow480d.lib;opencv_phase_unwrapping480d.lib;opencv_photo480d.lib;opencv_plot480d.lib;opencv_quality480d.lib;opencv_rapid480d.lib;opencv_reg480d.lib;opencv_rgbd480d.lib;opencv_saliency480d.lib;opencv_shape480d.lib;opencv_stereo480d.lib;opencv_stitching480d.lib;opencv_structured_light480d.lib;opencv_superres480d.lib;opencv_surface_matching480d.lib;opencv_text480d.lib;opencv_tracking480d.lib;opencv_video480d.lib;opencv_videoio480d.lib;opencv_videostab480d.lib;opencv_wechat_qrcode480d.lib;opencv_xfeatures2d480d.lib;opencv_ximgproc480d.lib;opencv_xobjdetect480d.lib;opencv_xphoto480d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)AudioCapture;$(SolutionDir)VideoCapture;$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>avcodec.lib;avdevice.lib;avformat.lib;avutil.lib;postproc.lib;swresample.lib;swscale.lib;avfilter.lib;winmm.lib;d3d9.lib;opencv_aruco480.lib;opencv_bgsegm480.lib;opencv_bioinspired480.lib;opencv_calib3d480.lib;opencv_ccalib480.lib;opencv_core480.lib;opencv_cvv480.lib;opencv_datasets480.lib;opencv_dnn480.lib;opencv_dnn_objdetect480.lib;opencv_dnn_superres480.lib;opencv_dpm480.lib;opencv_face480.lib;opencv_features2d480.lib;opencv_flann480.lib;opencv_fuzzy480.lib;opencv_gapi480.lib;opencv_hfs480.lib;opencv_highgui480.lib;opencv_imgcodecs480.lib;opencv_imgproc480.lib;opencv_img_hash480.lib;opencv_intensity_transform480.lib;opencv_line_descriptor480.lib;opencv_mcc480.lib;opencv_ml480.lib;opencv_objdetect480.lib;opencv_optflow480.lib;opencv_phase_unwrapping480.lib;opencv_photo480.lib;opencv_plot480.lib;opencv_quality480.lib;opencv_rapid480.lib;opencv_reg480.lib;opencv_rgbd480.lib;opencv_saliency480.lib;opencv_shape480.lib;opencv_stereo480.lib;opencv_stitching480.lib;opencv_structured_light480.lib;opencv_superres480.lib;opencv_surface_matching480.lib;opencv_text480.lib;opencv_tracking480.lib;opencv_video480.lib;opencv_videoio480.lib;opencv_videostab480.lib;opencv_wechat_qrcode480.lib;opencv_xfeatures2d480.lib;opencv_ximgproc480.lib;opencv_xobjdetect480.lib;opencv_xphoto480.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\AudioCapture\AudioCapture.cpp" />
+    <ClCompile Include="..\AudioCapture\WASAPICapture.cpp" />
+    <ClCompile Include="..\AudioCapture\WASAPIPlayer.cpp" />
+    <ClCompile Include="..\VideoCapture\DXGIScreenCapture.cpp" />
+    <ClCompile Include="..\VideoCapture\GDIScreenCapture.cpp" />
+    <ClCompile Include="..\VideoCapture\WindowHelper.cpp" />
+    <ClCompile Include="cmatch.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AudioCapture\AudioBuffer.h" />
+    <ClInclude Include="..\AudioCapture\AudioCapture.h" />
+    <ClInclude Include="..\AudioCapture\WASAPICapture.h" />
+    <ClInclude Include="..\AudioCapture\WASAPIPlayer.h" />
+    <ClInclude Include="..\include\libavcodec\ac3_parser.h" />
+    <ClInclude Include="..\include\libavcodec\adts_parser.h" />
+    <ClInclude Include="..\include\libavcodec\avcodec.h" />
+    <ClInclude Include="..\include\libavcodec\avdct.h" />
+    <ClInclude Include="..\include\libavcodec\avfft.h" />
+    <ClInclude Include="..\include\libavcodec\bsf.h" />
+    <ClInclude Include="..\include\libavcodec\codec.h" />
+    <ClInclude Include="..\include\libavcodec\codec_desc.h" />
+    <ClInclude Include="..\include\libavcodec\codec_id.h" />
+    <ClInclude Include="..\include\libavcodec\codec_par.h" />
+    <ClInclude Include="..\include\libavcodec\d3d11va.h" />
+    <ClInclude Include="..\include\libavcodec\defs.h" />
+    <ClInclude Include="..\include\libavcodec\dirac.h" />
+    <ClInclude Include="..\include\libavcodec\dv_profile.h" />
+    <ClInclude Include="..\include\libavcodec\dxva2.h" />
+    <ClInclude Include="..\include\libavcodec\jni.h" />
+    <ClInclude Include="..\include\libavcodec\mediacodec.h" />
+    <ClInclude Include="..\include\libavcodec\packet.h" />
+    <ClInclude Include="..\include\libavcodec\qsv.h" />
+    <ClInclude Include="..\include\libavcodec\vdpau.h" />
+    <ClInclude Include="..\include\libavcodec\version.h" />
+    <ClInclude Include="..\include\libavcodec\version_major.h" />
+    <ClInclude Include="..\include\libavcodec\videotoolbox.h" />
+    <ClInclude Include="..\include\libavcodec\vorbis_parser.h" />
+    <ClInclude Include="..\include\libavcodec\xvmc.h" />
+    <ClInclude Include="..\include\libavdevice\avdevice.h" />
+    <ClInclude Include="..\include\libavdevice\version.h" />
+    <ClInclude Include="..\include\libavdevice\version_major.h" />
+    <ClInclude Include="..\include\libavfilter\avfilter.h" />
+    <ClInclude Include="..\include\libavfilter\buffersink.h" />
+    <ClInclude Include="..\include\libavfilter\buffersrc.h" />
+    <ClInclude Include="..\include\libavfilter\version.h" />
+    <ClInclude Include="..\include\libavfilter\version_major.h" />
+    <ClInclude Include="..\include\libavformat\avformat.h" />
+    <ClInclude Include="..\include\libavformat\avio.h" />
+    <ClInclude Include="..\include\libavformat\version.h" />
+    <ClInclude Include="..\include\libavformat\version_major.h" />
+    <ClInclude Include="..\include\libavutil\adler32.h" />
+    <ClInclude Include="..\include\libavutil\aes.h" />
+    <ClInclude Include="..\include\libavutil\aes_ctr.h" />
+    <ClInclude Include="..\include\libavutil\attributes.h" />
+    <ClInclude Include="..\include\libavutil\audio_fifo.h" />
+    <ClInclude Include="..\include\libavutil\avassert.h" />
+    <ClInclude Include="..\include\libavutil\avconfig.h" />
+    <ClInclude Include="..\include\libavutil\avstring.h" />
+    <ClInclude Include="..\include\libavutil\avutil.h" />
+    <ClInclude Include="..\include\libavutil\base64.h" />
+    <ClInclude Include="..\include\libavutil\blowfish.h" />
+    <ClInclude Include="..\include\libavutil\bprint.h" />
+    <ClInclude Include="..\include\libavutil\bswap.h" />
+    <ClInclude Include="..\include\libavutil\buffer.h" />
+    <ClInclude Include="..\include\libavutil\camellia.h" />
+    <ClInclude Include="..\include\libavutil\cast5.h" />
+    <ClInclude Include="..\include\libavutil\channel_layout.h" />
+    <ClInclude Include="..\include\libavutil\common.h" />
+    <ClInclude Include="..\include\libavutil\cpu.h" />
+    <ClInclude Include="..\include\libavutil\crc.h" />
+    <ClInclude Include="..\include\libavutil\csp.h" />
+    <ClInclude Include="..\include\libavutil\des.h" />
+    <ClInclude Include="..\include\libavutil\detection_bbox.h" />
+    <ClInclude Include="..\include\libavutil\dict.h" />
+    <ClInclude Include="..\include\libavutil\display.h" />
+    <ClInclude Include="..\include\libavutil\dovi_meta.h" />
+    <ClInclude Include="..\include\libavutil\downmix_info.h" />
+    <ClInclude Include="..\include\libavutil\encryption_info.h" />
+    <ClInclude Include="..\include\libavutil\error.h" />
+    <ClInclude Include="..\include\libavutil\eval.h" />
+    <ClInclude Include="..\include\libavutil\ffversion.h" />
+    <ClInclude Include="..\include\libavutil\fifo.h" />
+    <ClInclude Include="..\include\libavutil\file.h" />
+    <ClInclude Include="..\include\libavutil\film_grain_params.h" />
+    <ClInclude Include="..\include\libavutil\frame.h" />
+    <ClInclude Include="..\include\libavutil\hash.h" />
+    <ClInclude Include="..\include\libavutil\hdr_dynamic_metadata.h" />
+    <ClInclude Include="..\include\libavutil\hdr_dynamic_vivid_metadata.h" />
+    <ClInclude Include="..\include\libavutil\hmac.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_cuda.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_d3d11va.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_drm.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_dxva2.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_mediacodec.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_opencl.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_qsv.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_vaapi.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_vdpau.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_videotoolbox.h" />
+    <ClInclude Include="..\include\libavutil\hwcontext_vulkan.h" />
+    <ClInclude Include="..\include\libavutil\imgutils.h" />
+    <ClInclude Include="..\include\libavutil\intfloat.h" />
+    <ClInclude Include="..\include\libavutil\intreadwrite.h" />
+    <ClInclude Include="..\include\libavutil\lfg.h" />
+    <ClInclude Include="..\include\libavutil\log.h" />
+    <ClInclude Include="..\include\libavutil\lzo.h" />
+    <ClInclude Include="..\include\libavutil\macros.h" />
+    <ClInclude Include="..\include\libavutil\mastering_display_metadata.h" />
+    <ClInclude Include="..\include\libavutil\mathematics.h" />
+    <ClInclude Include="..\include\libavutil\md5.h" />
+    <ClInclude Include="..\include\libavutil\mem.h" />
+    <ClInclude Include="..\include\libavutil\motion_vector.h" />
+    <ClInclude Include="..\include\libavutil\murmur3.h" />
+    <ClInclude Include="..\include\libavutil\opt.h" />
+    <ClInclude Include="..\include\libavutil\parseutils.h" />
+    <ClInclude Include="..\include\libavutil\pixdesc.h" />
+    <ClInclude Include="..\include\libavutil\pixelutils.h" />
+    <ClInclude Include="..\include\libavutil\pixfmt.h" />
+    <ClInclude Include="..\include\libavutil\random_seed.h" />
+    <ClInclude Include="..\include\libavutil\rational.h" />
+    <ClInclude Include="..\include\libavutil\rc4.h" />
+    <ClInclude Include="..\include\libavutil\replaygain.h" />
+    <ClInclude Include="..\include\libavutil\ripemd.h" />
+    <ClInclude Include="..\include\libavutil\samplefmt.h" />
+    <ClInclude Include="..\include\libavutil\sha.h" />
+    <ClInclude Include="..\include\libavutil\sha512.h" />
+    <ClInclude Include="..\include\libavutil\spherical.h" />
+    <ClInclude Include="..\include\libavutil\stereo3d.h" />
+    <ClInclude Include="..\include\libavutil\tea.h" />
+    <ClInclude Include="..\include\libavutil\threadmessage.h" />
+    <ClInclude Include="..\include\libavutil\time.h" />
+    <ClInclude Include="..\include\libavutil\timecode.h" />
+    <ClInclude Include="..\include\libavutil\timestamp.h" />
+    <ClInclude Include="..\include\libavutil\tree.h" />
+    <ClInclude Include="..\include\libavutil\twofish.h" />
+    <ClInclude Include="..\include\libavutil\tx.h" />
+    <ClInclude Include="..\include\libavutil\uuid.h" />
+    <ClInclude Include="..\include\libavutil\version.h" />
+    <ClInclude Include="..\include\libavutil\video_enc_params.h" />
+    <ClInclude Include="..\include\libavutil\xtea.h" />
+    <ClInclude Include="..\include\libpostproc\postprocess.h" />
+    <ClInclude Include="..\include\libpostproc\version.h" />
+    <ClInclude Include="..\include\libpostproc\version_major.h" />
+    <ClInclude Include="..\include\libswresample\swresample.h" />
+    <ClInclude Include="..\include\libswresample\version.h" />
+    <ClInclude Include="..\include\libswresample\version_major.h" />
+    <ClInclude Include="..\include\libswscale\swscale.h" />
+    <ClInclude Include="..\include\libswscale\version.h" />
+    <ClInclude Include="..\include\libswscale\version_major.h" />
+    <ClInclude Include="..\VideoCapture\DXGIScreenCapture.h" />
+    <ClInclude Include="..\VideoCapture\GDIScreenCapture.h" />
+    <ClInclude Include="..\VideoCapture\qedit.h" />
+    <ClInclude Include="..\VideoCapture\WindowHelper.h" />
+    <ClInclude Include="cmatch.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
